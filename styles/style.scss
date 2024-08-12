@@ -1,0 +1,62 @@
+$breakpoint-sm: 480px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1200px;
+
+@mixin smallDevice {
+  @media screen and (min-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin mediumDevice {
+  @media screen and (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin largeDevice {
+  @media screen and (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin xlargeDevice {
+  @media screen and (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+body {
+  @include smallDevice {
+  background-color: cyan;
+}
+  @include mediumDevice {
+    background-color: magenta;
+  }
+  @include largeDevice {
+    background-color: yellow;
+  }
+  @include xlargeDevice {
+    background-color: gray;
+  }
+}
+
+/*
+
+.success {
+  @include alert(green, black);
+  font-size: 16px;
+}
+
+.warning {
+  @include alert(yellow, white);
+  text-decoration: underline;
+}
+
+.error {
+  @include alert(blue, tomato);
+  text-transform: uppercase;
+}
+
+ */
