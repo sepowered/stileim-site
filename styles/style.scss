@@ -18,13 +18,14 @@ section {
 
 .nav {
   display: flex;
+  background-color: $bgColor;
   align-items: center;
   gap: 16px;
   padding: 36px 48px;
   //border
   border: 2px solid black;
   h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: bold;
   }
 
@@ -47,6 +48,23 @@ section {
     font-size: 2rem;
   }
 
+}
+
+@media screen and (width < 426px) {
+  .nav h3 {
+    display: none;
+  }
+  .title {
+    font-size: 2rem;
+    padding: 36px;
+    p:nth-child(2) {
+      font-size: 1.4rem;
+    }
+    p:last-child {
+      margin-top: 0.4rem;
+      font-size: 1rem;
+    }
+  }
 }
 
 .cards {
@@ -78,10 +96,12 @@ section {
   &:nth-child(3) {
   }
   &:last-child {
+    display: flex;
+    flex-direction: column;
     background-color: black;
     color: white;
     p {
-      padding-bottom: 0.4rem;
+      padding-bottom: 0.6rem;
     }
     a {
       color: rgba(200, 200, 200, 0.9);
