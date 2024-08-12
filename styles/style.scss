@@ -1,35 +1,91 @@
+@import "/node_modules/scss-reset/reset.css";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+$bgColor: #deceea;
+
 body {
+  display: grid;
+  grid-template-rows: max-content 1fr 1fr;
   font-family: Pretendard;
-  background-color: #deceea;
+  background-color: $bgColor;
+  overflow-y: scroll;
 }
 
 section {
   display: grid;
-  grid-template-columns: (repeat(4, 1fr));
-  grid-template-rows: 2fr 1fr;
-  height: 80vh;
+  grid-template-rows: repeat(4, 1fr);
 }
 
 .nav {
-  padding: 24px 48px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 36px 48px;
+  //border
+  border: 2px solid black;
+  h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
 }
 
 .title {
   display: flex;
-  grid-column: span 4;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  font-size: 2.5rem;
+  font-family: Pretendard;
+  font-size: 4rem;
+  padding: 72px;
+  gap: 0.6rem;
+  //border
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+
+  p:last-child {
+    margin-top: 0.4rem;
+    font-size: 2rem;
+  }
+
+}
+
+.cards {
+  border: 1px solid black;
+  display: grid;
 }
 
 .card {
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  padding: 12px 24px;
-  margin-right: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 1px solid black;
+  padding: 32px;
+
+  h2 {
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-bottom: 0.6rem;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  &:first-child {
+  }
   &:nth-child(2) {
-    margin-left: 16px;
+  }
+  &:nth-child(3) {
+  }
+  &:last-child {
+    background-color: black;
+    color: white;
+    p {
+      padding-bottom: 0.4rem;
+    }
+    a {
+      color: rgba(200, 200, 200, 0.9);
+    }
   }
 }
-
 
