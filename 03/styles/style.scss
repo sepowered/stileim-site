@@ -75,12 +75,45 @@ body {
       padding-left: 72px;
       //child
       .item__info--description-type {
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: 700;
+        padding-bottom: 12px;
       }
       .item__info--description-title {
         font-size: 3rem;
         font-weight: 700;
+      }
+      .item__info--description-addtocart {
+        display: flex;
+        align-items: center;
+        padding-top: 32px;
+        gap: 48px;
+        .item__info--description-qty {
+          display: flex;
+          align-items: center;
+          font-size: 2rem;
+          font-weight: 700;
+          gap: 8px;
+            #itemMinusQty {
+              opacity: 0.3;
+            }
+          }
+        .item__info--description-price {
+          font-size: 2rem;
+          font-weight: 700;
+        }
+        .item__info--description-atcbtn {
+          font-size: 2rem;
+          font-weight: 700;
+          text-transform: none;
+          padding: 32px;
+          border: $borderWidth*2 solid $borderColor;
+          &:hover {
+            background-color: #F08A74;
+            color: white;
+            transition: all 250ms;
+          }
+        }
       }
     }
     .item__info--description-detail {
