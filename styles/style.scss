@@ -50,32 +50,10 @@ section {
 
 }
 
-@media screen and (width < 426px) {
-  .nav h3 {
-    display: none;
-  }
-  .title {
-    font-size: 2rem;
-    padding: 36px;
-    p:nth-child(2) {
-      font-size: 1.4rem;
-    }
-    p:last-child {
-      margin-top: 0.4rem;
-      font-size: 1rem;
-    }
-  }
-  #footer {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-  }
-}
-
 .cards {
   border: 1px solid black;
   display: grid;
-  grid-template-rows: repeat(4, 0.4fr);
+  grid-template-rows: repeat(4, 1fr);
 }
 
 .card {
@@ -128,10 +106,14 @@ section {
   &:last-child {
     //display
     display: flex;
-    gap: 0.2rem;
     //style
     background-color: black;
     color: white;
+    .card__items {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
     a {
       color: rgba(200, 200, 200, 0.9);
       &:hover {
@@ -158,3 +140,27 @@ section {
   }
 }
 
+@media screen and (width < 426px) {
+  .nav h3 {
+    display: none;
+  }
+  .cards {
+    grid-template-rows: repeat(4, 0.4fr);
+  }
+  .title {
+    font-size: 2rem;
+    padding: 36px;
+    p:nth-child(2) {
+      font-size: 1.4rem;
+    }
+    p:last-child {
+      margin-top: 0.4rem;
+      font-size: 1rem;
+    }
+  }
+  #footer {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
