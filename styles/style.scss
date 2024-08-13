@@ -65,11 +65,17 @@ section {
       font-size: 1rem;
     }
   }
+  #footer {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
 }
 
 .cards {
   border: 1px solid black;
   display: grid;
+  grid-template-rows: repeat(4, 0.4fr);
 }
 
 .card {
@@ -90,21 +96,64 @@ section {
   }
 
   &:first-child {
+    &:hover {
+      background-color: black;
+      color: white;
+      transition: 300ms;
+      #arrow {
+        fill: white;
+      }
+    }
   }
   &:nth-child(2) {
+    &:hover {
+      background-color: black;
+      color: white;
+      transition: 300ms;
+      #arrow {
+        fill: white;
+      }
+    }
   }
   &:nth-child(3) {
+    &:hover {
+      background-color: black;
+      color: white;
+      transition: 300ms;
+      #arrow {
+        fill: white;
+      }
+    }
   }
   &:last-child {
+    //display
     display: flex;
-    flex-direction: column;
+    gap: 0.2rem;
+    //style
     background-color: black;
     color: white;
-    p {
-      padding-bottom: 0.6rem;
-    }
     a {
       color: rgba(200, 200, 200, 0.9);
+      &:hover {
+        color: rgba(200, 200, 200, 0.6);
+        transition: 300ms;
+      }
+    }
+    .card__items--links {
+      display: flex;
+      .card__items--linkicon {
+        display: flex;
+        justify-content: flex-end;
+        gap: 16px;
+        a svg {
+          fill: currentColor;
+          color: white;
+          &:hover {
+            color: rgba(200, 200, 200, 0.6);
+            transition: 300ms;
+          }
+        }
+      }
     }
   }
 }
