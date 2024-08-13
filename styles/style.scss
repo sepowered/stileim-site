@@ -141,15 +141,30 @@ section {
 }
 
 @media screen and (width < 426px) {
-  .nav h3 {
-    display: none;
+  .nav {
+    border: none;
+    border-bottom: 2px solid black;
+    h3 {
+      display: none;
+    }
+    svg {
+      height: 24px;
+    }
+
   }
   .cards {
     grid-template-rows: repeat(4, 0.4fr);
+    border: none;
+    .card {
+      border: none;
+      border-bottom: 2px solid black;
+    }
   }
   .title {
     font-size: 2rem;
     padding: 36px;
+    border: none;
+    border-bottom: 2px solid black;
     p:nth-child(2) {
       font-size: 1.4rem;
     }
