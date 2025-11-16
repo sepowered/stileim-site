@@ -43,9 +43,14 @@ section {
   border-left: 2px solid black;
   border-right: 2px solid black;
 
-  p:last-child {
+  p {
     margin-top: 0.4rem;
     font-size: 2rem;
+  }
+
+  p:first-child {
+    margin-top: 0;
+    font-size: 4rem;
   }
 
 }
@@ -168,12 +173,13 @@ section {
     padding: 36px;
     border: none;
     border-bottom: 2px solid black;
-    p:nth-child(2) {
-      font-size: 1.4rem;
-    }
-    p:last-child {
+    p {
       margin-top: 0.4rem;
       font-size: 1rem;
+    }
+    p:first-child {
+      margin-top: 0;
+      font-size: 2rem;
     }
   }
   #footer {
